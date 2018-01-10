@@ -1,0 +1,38 @@
+@import 'config';
+@import 'first-level';
+@import 'second-level';
+@import 'third-level';
+
+ul{
+    margin: 0;
+}
+
+#site-navigation{
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+
+    #{$menu-name}{
+        float: right;
+        font-size: 15px;
+        
+        li{
+            list-style: none;
+            position: relative;
+        
+            a{
+                text-decoration: none;
+                word-spacing: $word-spacing;
+                color: $flc-color;
+            }
+        }
+
+        @extend %first-level;
+        @extend %second-level;
+        @extend %third-level;
+
+    }
+}
+
+

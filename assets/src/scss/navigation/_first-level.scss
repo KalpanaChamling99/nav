@@ -1,0 +1,70 @@
+
+%first-level{
+
+       
+    > #{$sub-class-name}{
+        &:after{
+            content : "\f107";
+            font-family: FontAwesome;
+            font-size: 17px;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            color: $color_white;
+            transform: translate(0, -50%);
+
+        }
+    }
+   
+    > li{
+        float: left;
+        border-top: 3px solid transparent;
+        transition: all 0.3s linear;
+        
+        > a{
+            padding: $flc-padding;
+            color: $flc-color;
+            float: left;
+            text-transform: $text-transform;
+        }
+
+        &.current-menu-item,   
+        &:hover{
+        border-top: 3px solid $color_primary;
+           background-color: rgba( $color_white, 0.1 ) !important;
+           > a{
+                 background-color: $flc-hover-color;  
+            }
+        }
+
+    }
+
+    /* show sub ul on hover */
+    
+    li{
+        position: relative;
+
+        ul{
+            visibility: hidden;
+            opacity: 0;
+            transform:  translate( 0, $slc-ani-distance);
+            transition: $slc-aniamtion-out;
+        }
+        
+        &:hover{
+            // background-color: red;
+            
+            > ul{ 
+                visibility: visible;
+                opacity: 1;
+                transform:  translate( 0, 0 );
+                transition: $slc-aniamtion-in;
+            }
+        }
+    }
+
+    
+
+    
+
+}

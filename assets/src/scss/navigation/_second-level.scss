@@ -1,0 +1,51 @@
+%second-level{
+    
+    > li {
+
+        ul{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: $menu-width;
+            background-color: $slc-bg-color;
+           
+            li {
+                position: relative;
+                a{
+                    &:hover{
+                        background-color:  $slc-hover-bg-color;
+                    }
+                }
+
+            }
+
+            #{$sub-class-name}{
+                &:after{
+                    content : "\f105";
+                    color: $color_white;
+                    font-family: FontAwesome;
+                    font-size: 17px;
+                    position: absolute;
+                    top: 5px;
+                    right: 10px;
+                }
+            }
+
+             
+            &:hover{
+                > a {
+                    // background-color: $slc-hover-bg-color;
+                }
+            }
+
+            a{
+                padding: $slc-padding;
+                display: block;
+                font-size:$slc-font-size;
+            }
+
+        }
+
+    }
+
+}

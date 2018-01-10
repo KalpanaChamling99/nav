@@ -1,0 +1,30 @@
+/* ********************************************** 
+ *  First level  ( flc = first level child )
+ * ********************************************** */
+$flc-padding     : 27px 30px 30px;
+$flc-color       : #fff;
+$flc-hover-color : gray; 
+$word-spacing    : 6px;
+$text-transform  : uppercase;
+$hover-color     : blue;
+$color_white: #fff;
+$color_primary: rgb(68, 67, 67);
+
+
+
+/* ********************************************** 
+ *  Second level  ( slc = second level child )
+ * ********************************************** */
+$slc-bg-color       : #383b3d;
+$slc-padding        : 10px 15px;
+$slc-hover-bg-color : #082837; 
+$slc-aniamtion-in   : all 0.4s ease-in-out; 
+$slc-aniamtion-out  : all 0.1.5s ease-in-out; 
+$slc-ani-distance   : 20px;
+$slc-font-size      : 14px;
+
+
+$menu-name          : '.desktop-menu';
+$menu-width         : 250px;
+
+$sub-class-name     : '.menu-item-has-children';

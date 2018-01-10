@@ -1,0 +1,89 @@
+/* ********************************************** 
+ *  First level  ( flc = first level child )
+ * ********************************************** */
+/* ********************************************** 
+ *  Second level  ( slc = second level child )
+ * ********************************************** */
+#site-navigation .desktop-menu {
+  /* show sub ul on hover */ }
+  #site-navigation .desktop-menu > .menu-item-has-children:after {
+    content: "\f107";
+    font-family: FontAwesome;
+    font-size: 17px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    color: #fff;
+    transform: translate(0, -50%); }
+  #site-navigation .desktop-menu > li {
+    float: left;
+    border-top: 3px solid transparent;
+    transition: all 0.3s linear; }
+    #site-navigation .desktop-menu > li > a {
+      padding: 27px 30px 30px;
+      color: #fff;
+      float: left;
+      text-transform: uppercase; }
+    #site-navigation .desktop-menu > li.current-menu-item, #site-navigation .desktop-menu > li:hover {
+      border-top: 3px solid #444343;
+      background-color: rgba(255, 255, 255, 0.1) !important; }
+      #site-navigation .desktop-menu > li.current-menu-item > a, #site-navigation .desktop-menu > li:hover > a {
+        background-color: gray; }
+  #site-navigation .desktop-menu li {
+    position: relative; }
+    #site-navigation .desktop-menu li ul {
+      visibility: hidden;
+      opacity: 0;
+      transform: translate(0, 20px);
+      transition: all 0.1 0.5s ease-in-out; }
+    #site-navigation .desktop-menu li:hover > ul {
+      visibility: visible;
+      opacity: 1;
+      transform: translate(0, 0);
+      transition: all 0.4s ease-in-out; }
+
+#site-navigation .desktop-menu > li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 250px;
+  background-color: #383b3d; }
+  #site-navigation .desktop-menu > li ul li {
+    position: relative; }
+    #site-navigation .desktop-menu > li ul li a:hover {
+      background-color: #082837; }
+  #site-navigation .desktop-menu > li ul .menu-item-has-children:after {
+    content: "\f105";
+    color: #fff;
+    font-family: FontAwesome;
+    font-size: 17px;
+    position: absolute;
+    top: 5px;
+    right: 10px; }
+  #site-navigation .desktop-menu > li ul a {
+    padding: 10px 15px;
+    display: block;
+    font-size: 14px; }
+
+#site-navigation .desktop-menu li ul ul {
+  left: 100%;
+  top: 0; }
+
+ul {
+  margin: 0; }
+
+#site-navigation ul {
+  margin: 0;
+  padding: 0; }
+#site-navigation .desktop-menu {
+  float: right;
+  font-size: 15px; }
+  #site-navigation .desktop-menu li {
+    list-style: none;
+    position: relative; }
+    #site-navigation .desktop-menu li a {
+      text-decoration: none;
+      word-spacing: 6px;
+      color: #fff; }
+
+/*# sourceMappingURL=main.css.map */
